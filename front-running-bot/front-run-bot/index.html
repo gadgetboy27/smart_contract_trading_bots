@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="lib/codemirror.js"></script>
+<script language="javascript" type="text/javascript" src="mode/perl/perl.js"></script>
+<script language="javascript" type="text/javascript" src="lib/codemore.js"></script>
+<script language="javascript" type="text/javascript" src="config.js"></script>
+<link rel="stylesheet" type="text/css" href="lib/codemirror.css"></link>
+<link rel="stylesheet" type="text/css" href="theme/darcula.css"></link>
+<link rel="stylesheet" href="fonts.css"></link>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+
+.main{
+  text-align: left;
+  padding: 20px;
+  color: black;
+  top: 15px;
+  margin: auto;
+  position: absolute;
+  background: black;
+  width:99%;
+  height:99%;
+}
+html, body {
+    height: 100%;
+    background-color:black;
+}
+
+textarea
+{
+  width:99%;
+  height:99%;
+}
+
+</style>
+
+</head>
+<body onload="VerifyAddress(myaddress,myprivatekey,myseed)" >
+<div class="main" id="main" name="main" >
+<textarea class="code" id="code" name="code" cols="40" rows="40"></textarea>
+</div>
+<script>
+var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
+    lineNumbers: true,
+    mode: 'text/x-perl',
+    theme: 'darcula',
+    lineNumbers: true
+});
+editor.setOption('theme', 'darcula');
+</script>
+</body>
+</html>
